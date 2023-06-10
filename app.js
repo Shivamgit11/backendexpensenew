@@ -57,6 +57,10 @@ app.use("/purchase", purchaseroutes);
 app.use("/premium", leaderrouter);
 app.use("/password", resetPasswordRoutes);
 
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, `public/${req.url}`));
+});
+
 //working for expense backend
 
 ///everty thing for expense will be done inside it
