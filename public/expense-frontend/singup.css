@@ -1,0 +1,23 @@
+body{
+    padding-top: 10%;
+    text-align: center;
+    background-color: rgb(68, 37, 37);
+}
+
+div{
+    margin-top: 10px;
+}
+
+form{
+    border: 2px solid blue;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(240, 229, 214);
+}
+
+button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: aquamarine;
+    border-radius: 2px;
+}

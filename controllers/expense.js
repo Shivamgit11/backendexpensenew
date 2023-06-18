@@ -31,6 +31,7 @@ const download = async (req, res) => {
 };
 
 const addExpense = async (req, res, next) => {
+  console.log("triggered");
   const t = await sequelize.transaction();
   try {
     const amount = req.body.amount;

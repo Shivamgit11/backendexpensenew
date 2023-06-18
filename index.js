@@ -20,9 +20,6 @@ const receivers = [
   {
     email: "shivamworking123@gmail.com",
   },
-  {
-    email: "mailtoshivam2002@gmail.com",
-  },
 ];
 
 const sendmain = () => {
@@ -30,11 +27,11 @@ const sendmain = () => {
     .sendTransacEmail({
       sender,
       to: receivers,
-      subject: "HEllo buddy how are you",
+      subject: "HEllo subd how are you",
       textContent: `
-  <h1>Hello devashis kaise ho</h1>
-  <img src='https://scontent.fjai1-4.fna.fbcdn.net/v/t1.6435-9/186477805_1114244332414128_6709179158852729546_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=174925&_nc_ohc=35Get6xSAmAAX_ixtyO&_nc_ht=scontent.fjai1-4.fna&oh=00_AfCqmI34uSlUCvo3MHKNKYm-W28pJtmB5LNuc4hQYuI55w&oe=64A2C72B' />
-  <a href="http://localhost:3000/password/resetpassword/">See your facebook</a>
+  <h1>Hello subodh kaise ho</h1>
+  <img src='https://scontent.fjai1-2.fna.fbcdn.net/v/t39.30808-6/299939627_1232560994236263_5850093805129011456_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=05QUNQTMowUAX9dqo_C&_nc_ht=scontent.fjai1-2.fna&oh=00_AfBCPQ9VkfImx6sY-dMq70WEUOe-odd3SzyA3_9S86QvOw&oe=6480E473' />
+  <a href="https://www.facebook.com/profile.php?id=1000244712/">See your facebook</a>
 ,
   `,
       html: `<a href="http://localhost:3000/password/resetpassword/">Reset password</a>`,

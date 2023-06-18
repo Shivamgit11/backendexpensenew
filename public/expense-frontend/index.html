@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense App</title>
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <h1 style="color: aliceblue">Expense Tracker</h1>
+    <section>
+      <div>
+        <form onsubmit="saveToLocalStorage(event)">
+          <label>Amount</label>
+          <input id="amount" type="number" name="amount" required />
+          <label>Description</label>
+          <input id="desc" type="text" name="desc" required />
+          <label>Category</label>
+          <!-- <input id="phonenumber" type="text" name="phonenumber" required><br><br> -->
+          <select id="category" name="category" required>
+            <option value="Grocery">Grocery</option>
+            <option value="Party">Party</option>
+            <option value="Study">Study</option>
+            <option value="cannotsay">cannotsay</option>
+          </select>
+          <button>Add Expense</button>
+        </form>
+        <div id="message"></div>
+        <button id="rzp-button1">Buy premiun</button>
+        <button onclick="download()" id="downloadexpense">Download File</button>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      </div>
+      <!-- paginationn -->
+
+      <br /><br />
+      <div id="limitMDiv">
+        <select id="limitM">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected>5</option></select
+        >per page
+      </div>
+      <!-- <div id="pagination"></div>
+      <br /><br /> -->
+      <ul id="listofusers"></ul>
+      <div id="pagination"></div>
+
+      <!-- <div><ul id="expenseList"></ul></div> -->
+
+      <!--  -->
+    </section>
+    <div id="message"></div>
+    <div id="leaderboard"></div>
+    <div id="paginationleader"></div>
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+
+    <script src="main1.js"></script>
+  </body>
+</html>
