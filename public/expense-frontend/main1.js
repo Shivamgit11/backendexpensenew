@@ -20,7 +20,7 @@ async function saveToLocalStorage(event) {
   const token = localStorage.getItem("token");
 
   axios
-    .post("http://54.82.231.244:3000/expense/expensedetails", obj, {
+    .post("http://localhost:3000/expense/expensedetails", obj, {
       headers: { Authorization: token },
     })
     .then((response) => {
@@ -44,7 +44,7 @@ function download() {
   const token = localStorage.getItem("token");
   console.log("inside download file");
   axios
-    .get("http://54.82.231.244:3000/expense/download", {
+    .get("http://localhost:3000/expense/download", {
       headers: { Authorization: token },
     })
     .then((response) => {
@@ -105,7 +105,7 @@ window.addEventListener("DOMContentLoaded", () => {
   console.log(page);
   axios
     .get(
-      `http://54.82.231.244:3000/expense/expensedetails?page=${page}&items_per_page=5`,
+      `http://localhost:3000/expense/expensedetails?page=${page}&items_per_page=5`,
       {
         headers: { Authorization: token },
       }
@@ -161,7 +161,7 @@ function showleaderboard() {
   inputElement.onclick = async () => {
     const token = localStorage.getItem("token");
     const userLeaderboardArray = await axios.get(
-      "http://54.82.231.244:3000/premium/showLeaderboard",
+      "http://localhost:3000/premium/showLeaderboard",
       {
         headers: { Authorization: token },
       }
@@ -192,7 +192,7 @@ function editUserDetails(amount, description, category, userId) {
 function deleteUser(userId) {
   const token = localStorage.getItem("token");
   axios
-    .delete(`http://54.82.231.244:3000/expense/expensedetails/${userId}`, {
+    .delete(`http://localhost:3000/expense/expensedetails/${userId}`, {
       headers: { Authorization: token },
     })
     .then((response) => {
@@ -221,7 +221,7 @@ document.getElementById("rzp-button1").onclick = async function (e) {
   console.log(token);
 
   const response = await axios.get(
-    "http://54.82.231.244:3000/purchase/premiummembership",
+    "http://localhost:3000/purchase/premiummembership",
     {
       headers: { Authorization: token },
     }
@@ -233,7 +233,7 @@ document.getElementById("rzp-button1").onclick = async function (e) {
     //This handler function will handle the success payment
     handler: async function (response) {
       const res = await axios.post(
-        "http://54.82.231.244:3000/purchase/updatetransactionstatus",
+        "http://localhost:3000/purchase/updatetransactionstatus",
         {
           order_id: options.order_id,
           payment_id: response.razorpay_payment_id,
@@ -295,7 +295,7 @@ function getExpenses(page) {
   const token = localStorage.getItem("token");
   axios
     .get(
-      `http://54.82.231.244:3000/expense/expensedetails?page=${page}&items_per_page=${items_per_page}`,
+      `http://localhost:3000/expense/expensedetails?page=${page}&items_per_page=${items_per_page}`,
       {
         headers: { Authorization: token },
       }

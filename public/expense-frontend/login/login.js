@@ -13,14 +13,14 @@ function loginhandler(event) {
   };
 
   //   axios
-  //     .post("http://54.82.231.244:3000/auth/logindetails", obj)
+  //     .post("http://localhost:3000/auth/logindetails", obj)
   //     .then((response) => {
   //       console.log(response);
   //     })
   //     .catch((err) => console.log(err));
 
   axios
-    .post("http://54.82.231.244:3000/auth/logindetails", obj)
+    .post("http://localhost:3000/auth/logindetails", obj)
     .then((response) => {
       if (response.status == 200) {
         alert(response.data.message);
